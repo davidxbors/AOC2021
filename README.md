@@ -5,3 +5,7 @@ This is the home of my Advent of Code 2021 solutions. I will try to solve all of
 ## Day 5
 
 For day 5 I had two solutions in mind. One involved more time-complexity, one more space-complexity. As I initially misinterpreted how big the space complexity of the problem is I went with the more time complex one.
+
+## Day 6
+
+Time of running for day 6: `0.01 sec`. I achieved O(days * 9) complexity by looking at fish as quantities of the same kind (same kind meaning equal number of days untill multiplication).
