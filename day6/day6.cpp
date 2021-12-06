@@ -7,7 +7,8 @@ void shift_right (std::vector<u64>& v)
 	v[v.size()-1] = 0;
 }
 
-u64 solve (u32 start, u32 end, std::vector<u64> school) {
+u64 solve (u32 start, u32 end, std::vector<u64> school) 
+{
 	/* 
 	   every day dec each counter and reset the fish that
 	   get to 0
