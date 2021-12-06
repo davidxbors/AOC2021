@@ -4,7 +4,7 @@ def read(filepath):
         vents = [[(int(x[0].split(',')[0]), int(x[0].split(',')[1])) , (int(x[1].split(',')[0]), int(x[1].split(',')[1]))] for x in vents]
     return vents
 
-def part1():
+def solve():
     vents = read("data/day5")
     result = 0
     for i, vent in enumerate(vents):
@@ -36,9 +36,7 @@ def part1():
  
 def main():
     print("AOC2021 Day5: ")
-    print("Part1 => ")
-    print("Part2 => ")
-    part1()
+    solve()
 
 if __name__ == "__main__":
     main()
