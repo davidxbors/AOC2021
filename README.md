@@ -12,4 +12,11 @@ Time of running for day 6: `0.01 sec`. I achieved O(days * 9) complexity by look
 
 ## Day 7
 
-`0.05 sec` (and eve `0.03` with one run) achieved today. Part 1 was obviously using the median and this made me think that part 2 will also use statistics concepts. I observed that for the example the mean was the correct position so decided to try an aglorithm that uses the mean for the actual input too. It worked and using this configuration I obtained the time stated previously. After finishing the challenge I read a demonstration that proved that the mean, while very close to the actual answer is not exact so I also added a "naive" approach that should work with bigger inputs too. (of course it takes considerably longer)
+`0.05 sec` (and eve `0.03` with one run) achieved today. Part 1 was obviously using the median and this made me think that part 2 will also use statistics concepts. I observed that for the example the mean was the correct position so decided to try an aglorithm that uses the mean for the actual input too. It worked and using this configuration I obtained the time stated previously. After finishing the challenge I read a demonstration that proved that the mean, while very close to the actual answer is not exact[1] so I also added a "naive" approach that should work with trickier inputs[2] too. (of course it takes considerably longer)
+
+
+## References
+
+[1](old.reddit.com.adventofcode/comments/rar7ty/2021_day_7_solutions/hnkbtug/)
+
+[2] -> take for example the input "0,0,0,0,0,0,0,0,0,16": it's mean is 1.6 while the answer is 1
