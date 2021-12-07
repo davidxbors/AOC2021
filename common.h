@@ -4,6 +4,8 @@
 #include <iterator>
 #include <algorithm>
 #include <numeric>
+#include <cmath>
+#include <limits>
 
 using u8 = std::uint8_t;
 using u16 = std::uint16_t;
