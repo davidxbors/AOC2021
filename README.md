@@ -9,3 +9,7 @@ For day 5 I had two solutions in mind. One involved more time-complexity, one mo
 ## Day 6
 
 Time of running for day 6: `0.01 sec`. I achieved O(days * 9) complexity by looking at fish as quantities of the same kind (same kind meaning equal number of days untill multiplication).
+
+## Day 7
+
+`0.05 sec` (and eve `0.03` with one run) achieved today. Part 1 was obviously using the median and this made me think that part 2 will also use statistics concepts. I observed that for the example the mean was the correct position so decided to try an aglorithm that uses the mean for the actual input too. It worked and using this configuration I obtained the time stated previously. After finishing the challenge I read a demonstration that proved that the mean, while very close to the actual answer is not exact so I also added a "naive" approach that should work with bigger inputs too. (of course it takes considerably longer)
