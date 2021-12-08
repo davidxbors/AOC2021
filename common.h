@@ -6,6 +6,8 @@
 #include <numeric>
 #include <cmath>
 #include <limits>
+#include <string>
+#include <array>
 
 using u8 = std::uint8_t;
 using u16 = std::uint16_t;

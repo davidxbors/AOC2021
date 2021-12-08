@@ -2,10 +2,7 @@
 
 s32 fuel_func (u64 distance)
 {
-	s32 result = 0;
-	for (s32 i = 1; i <= distance; i++)
-		result += i;
-	return result;
+	return distance * (distance + 1) / 2;
 }
 
 int main (void)

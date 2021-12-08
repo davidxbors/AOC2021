@@ -17,6 +17,6 @@ Time of running for day 6: `0.01 sec`. I achieved O(days * 9) complexity by look
 
 ## References
 
-[1](old.reddit.com.adventofcode/comments/rar7ty/2021_day_7_solutions/hnkbtug/)
+[1](https://old.reddit.com.adventofcode/comments/rar7ty/2021_day_7_solutions/hnkbtug/)
 
 [2] -> take for example the input "0,0,0,0,0,0,0,0,0,16": it's mean is 1.6 while the answer is 1
