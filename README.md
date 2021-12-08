@@ -20,7 +20,7 @@ Time of running for day 6: `0.01 sec`. I achieved O(days * 9) complexity by look
 
 Part 1 was really easy and was done in O(n) complexity. For part 2 I used the fact that the more complicated patterns (of length 5 and 6) can be differentiated between by comparing them with patterns already found. So, there are 3 different categories of patterns:
 
-* Basic patterns: these are the ones that can be matched to digits using their length as a criteria (the ones that we need to find for part1): 1, 7, 4, 8
+* Basic patterns: these are the ones that can be matched to digits using their length as a criterion (the ones that we need to find for part1): 1, 7, 4, 8
 
 * Medium patterns: these are patterns that can be matched to digits by their length (the only length compatible with this definition is 6) and by comparing them only to basic patterns:
   * 9 -> we can match a pattern to 9 if its length is 6 and it contains all segments of 4
@@ -32,7 +32,7 @@ Part 1 was really easy and was done in O(n) complexity. For part 2 I used the fa
   * 5 -> we can match a pattern to 5 if its length is 5 and all its segments are contained by 6
   * 2 -> we can match a pattern to 6 if its length is 5 and the previous match attempts failed
 
-With this in mind we will need three iterations through the first 10 patterns given on each line to map all patterns to digits. (we need to first map basic patterns, then medium, then hard because they have dependencies with each other) There might be some better patterns which would allow us to use only two iterations but I didn't have time to think about them / read about them. If I'll discover them I'll make an update.
+With this in mind we will need three iterations through the first 10 patterns given on each line to map all patterns to digits. (we need to first map basic patterns, then medium, then hard because they have dependencies with each other) There might be some better matching criteria which would allow us to use only two iterations but I didn't have time to think about them / read about them. If I'll discover them I'll make an update.
 
 ## References
 
