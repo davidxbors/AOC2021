@@ -32,10 +32,18 @@ Part 1 was really easy and was done in O(n) complexity. For part 2 I used the fa
   * 5 -> we can match a pattern to 5 if its length is 5 and all its segments are contained by 6
   * 2 -> we can match a pattern to 6 if its length is 5 and the previous match attempts failed
 
-With this in mind we will need three iterations through the first 10 patterns given on each line to map all patterns to digits. (we need to first map basic patterns, then medium, then hard because they have dependencies with each other) There might be some better matching criteria which would allow us to use only two iterations but I didn't have time to think about them / read about them. If I'll discover them I'll make an update.
+With this in mind we will need three iterations through the first 10 patterns given on each line to map all patterns to digits. (we need to first map basic patterns, then medium, then hard because they have dependencies with each other) There might be some better matching criteria which would allow us to use only two iterations but I didn't have time to think about them / read about them. If I'll discover them I'll make an update.[3]
+
+## Day 9
+
+Part 1 is what you see is what you get, part 2 is a basic boundary_fill algorithm[4].
 
 ## References
 
 [1](https://old.reddit.com.adventofcode/comments/rar7ty/2021_day_7_solutions/hnkbtug/)
 
 [2] -> take for example the input "0,0,0,0,0,0,0,0,0,16": it's mean is 1.6 while the answer is 1
+
+[3] -> 5 is the only one amongst 2 and 5 which has exactly 3 ON segments in common with 4, so if at this point the pattern we are looking at has exactly 3 letters in common with the pattern for 4. This matching criterion would make the hard patterns class obsolete and would help us solve the problem with only 2 iterations.
+
+[4](https://en.wikipedia.org/wiki/Flood_fill)
