@@ -38,6 +38,12 @@ With this in mind we will need three iterations through the first 10 patterns gi
 
 Part 1 is what you see is what you get, part 2 is a basic boundary_fill algorithm[4].
 
+## Day 10
+
+`0.05 sec`.
+
+Today was easy money. Basically all you needed was a lifo stack and also to calculate the median. It really seems the median is a recurring theme this year. Both parts were done in O(n) complexity as the input was parsed.
+
 ## References
 
 [1](https://old.reddit.com.adventofcode/comments/rar7ty/2021_day_7_solutions/hnkbtug/)
