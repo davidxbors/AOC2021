@@ -24,3 +24,17 @@ using s64 = std::int64_t;
 
 using f32 = float;
 using f64 = double;
+
+using sz = size_t;
+
+/*
+ * convert std::vector<u8> to std::vector<T> specified when calling function
+ */
+template <typename T>
+std::vector<T> convert_vchar_v (std::vector<u8> v)
+{
+	std::vector<T> result;
+	for (auto el : v)
+		result.push_back(static_cast<T>(el - 48));
+	return result;
+}
