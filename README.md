@@ -44,6 +44,14 @@ Part 1 is what you see is what you get, part 2 is a basic boundary_fill algorith
 
 Today was easy money. Basically all you needed was a lifo stack and also to calculate the median. It really seems the median is a recurring theme this year. Both parts were done in O(n) complexity as the input was parsed.
 
+## Day 11
+
+`0.04 sec`
+
+Today was a kind of what you see is what you get problem. Nothing too fancy, one had to just emulate the actual evolution of the flashes. Using a recursive flash function and two iterations of the grid on each step (one to increment the normal energy additon, one to check ofr flashes and flash induced increments and ofc new flashes triggered by those increments) was the key to solving the problem fast.
+
+I also added some common functions today to make my life easier in the next 2 weeks. (check common.hpp & commonio.hpp)
+
 ## References
 
 [1](https://old.reddit.com.adventofcode/comments/rar7ty/2021_day_7_solutions/hnkbtug/)
