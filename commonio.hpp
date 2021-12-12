@@ -7,13 +7,18 @@ void print (void)
 	std::cout << "\n";
 }
 
+template <typename T>
+void print (T x)
+{
+	std::cout << x << " ";
+}
+
 /* prints std::vector */
 template <typename T>
 void print (std::vector<T> v)
 {
 	for (auto el : v)
-		std::cout << el << " ";
-	print();
+		print(el);
 }
 
 /* prints std::vector<std::vector<>> */
@@ -22,6 +27,7 @@ void print (std::vector<std::vector<T>> tdv)
 {
 	for (auto line : tdv) {
 		print(line);
+		print();
 	}
 }
 

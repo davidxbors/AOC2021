@@ -11,6 +11,7 @@
 #include <array>
 #include <set>
 #include <stack>
+#include <map>
 
 using u8 = std::uint8_t;
 using u16 = std::uint16_t;
@@ -36,5 +37,23 @@ std::vector<T> convert_vchar_v (std::vector<u8> v)
 	std::vector<T> result;
 	for (auto el : v)
 		result.push_back(static_cast<T>(el - 48));
+	return result;
+}
+
+template <typename K, typename V>
+void print (std::map<K, V> m)
+{
+	for (auto e : m) {
+		std::cout << e.first << " -> [ ";
+		print(e.second);
+		std::cout << " ]\n";
+	}
+}
+template <typename T>
+u64 contains (std::vector<T> v, T el)
+{
+	u64 result = 0;
+	for (auto e : v)
+		result += (e == el);
 	return result;
 }
