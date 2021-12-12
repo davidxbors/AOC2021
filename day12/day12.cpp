@@ -1,11 +1,7 @@
 #include "../common.hpp"
 #include "../commonio.hpp"
 
-#define DEBUG 0
-
-struct graph {
-	std::map<std::string, std::vector<std::string>> adj;
-};
+using graph = std::map<std::string, std::vector<std::string>>;
 
 graph parse_input (std::string filepath)
 {
@@ -19,8 +15,8 @@ graph parse_input (std::string filepath)
 		std::getline(iss, a, '-');
 		std::getline(iss, b);
 		
-		g.adj[a].push_back(b);
-		g.adj[b].push_back(a);
+		g[a].push_back(b);
+		g[b].push_back(a);
 	}
 	return g;
 }
@@ -30,12 +26,8 @@ u64 paths = 0;
 void path (graph g, std::string node, std::vector<std::string> cpath, bool twice=true)
 {
 	cpath.push_back(node);
-	for (auto adj_node : g.adj[node]) {
+	for (auto adj_node : g[node]) {
 		if (adj_node == "end") {
-#if DEBUG
-			print(cpath);
-			print();
-#endif
 			paths++;
 		}
 		else if (std::all_of(adj_node.begin(), adj_node.end(), [](unsigned char c){ return std::isupper(c); })) {
@@ -56,13 +48,8 @@ void solve ()
 	g = parse_input("data/day12");
 	
 	std::map<std::string, s32> visited;
-	for (auto e : g.adj)
+	for (auto e : g)
 		visited[e.first] = 0;
-
-#if DEBUG
-	print(g.adj);
-	print(visited);
-#endif
 	
 	path (g, "start", std::vector<std::string>());
 	std::cout << "Part 1 => " << paths << "\n";
